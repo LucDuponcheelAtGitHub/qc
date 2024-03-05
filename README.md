@@ -139,6 +139,48 @@ Note: in
 
 `QuantumStateVector` is a `type` alias for `NormedColumnVector[Complex]`.
 
+### `ProbabilisticStateVectorSpace`
+
+[ProbabilisticStateVectorSpace.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/qc/types/scalar/ProbabilisticStateVectorSpace.scala)
+
+`ProbabilisticStateVectorSpace` is a `type` alias for `NormedColumnVectorSpace[Real]`.
+
+### `QuantumStateVectorSpace`
+
+[QuantumStateVectorSpace.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/qc/types/scalar/QuantumStateVectorSpace.scala.)
+
+`QuantumStateVectorSpace` is a `type` alias for `NormedColumnVectorSpace[Complex]`.
+
+### `ProbabilisticStateVectorExamples`
+
+[ProbabilisticStateVectorExamples.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/test/scala/qc/scalar/ProbabilisticStateVectorExamples.scala)
+
+### `QuantumStateVectorExamples`
+
+[QuantumStateVectorExamples.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/test/scala/qc/scalar/QuantumStateVectorExamples.scala)
+
+### `ProbabilisticStateVectorSpaceSuite`
+
+[ProbabilisticStateVectorSpaceSuite.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/test/scala/qc/scalar/ProbabilisticStateVectorSpaceSuite.scala)
+
+### `QuantumStateVectorSpaceSuite`
+
+[QuantumStateVectorSpaceSuite.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/test/scala/qc/scalar/QuantumStateVectorSpaceSuite.scala)
+
+### Testing
+
+```scala
+sbt:qc> test
+qc.scalar.ProbabilisticStateVectorSpaceSuite:
+  + norm == 1.0 0.005s
+  + probabilisticStateVector == linearBasisVectorCombination 0.0s
+qc.scalar.QuantumStateVectorSpaceSuite:
+  + norm == 1.0 0.005s
+  + quantumStateVector == linearBasisVectorCombination 0.0s
+[info] Passed: Total 4, Failed 0, Errors 0, Passed 4
+[success]
+```
+
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!--

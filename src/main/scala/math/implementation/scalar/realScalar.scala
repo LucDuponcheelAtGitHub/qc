@@ -28,3 +28,4 @@ given realScalar: Scalar[Real] with
     r =>
       if (r >= 0.0) { s"+${r}" }
       else { s"${r}" }
+
