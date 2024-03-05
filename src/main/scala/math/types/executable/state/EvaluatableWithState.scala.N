@@ -1,9 +1,0 @@
-package math.types.executable.state
-
-import math.types.executable.{Value}
-
-import math.types.executable.state.{With}
-
-import math.specification.executable.state.{AsExecutableWithState}
-
-type EvaluatableWithState[State] = (Value With State) AsExecutableWithState State 

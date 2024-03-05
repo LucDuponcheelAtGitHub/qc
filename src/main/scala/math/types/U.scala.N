@@ -1,3 +1,0 @@
-package math.types
-
-type U = Unit

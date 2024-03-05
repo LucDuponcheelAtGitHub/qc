@@ -1,3 +1,0 @@
-package math.types
-
-type Read = [R] =>> [Z] =>> R => Z

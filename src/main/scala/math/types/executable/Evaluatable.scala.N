@@ -1,7 +1,0 @@
-package math.types.executable
-
-import math.specification.executable.{Executable}
-
-import math.types.executable.{Value}
-
-type Evaluatable = Executable[Value]

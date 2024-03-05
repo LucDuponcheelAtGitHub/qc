@@ -1,5 +1,0 @@
-package qc.types.system
-
-import scala.collection.immutable.{Seq}
-
-type ClassicalStates = [X] =>> Seq[X]
