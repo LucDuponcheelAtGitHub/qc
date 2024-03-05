@@ -137,6 +137,7 @@ Note: in
 
 <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
+<!--
 In what follows, probabilistic information resp. quantum information will be *represented* as a value of type
 `NormedVector[Real]` resp. `NormedVector[Complex]`, more precisely, a value of type `NormedColumnVector[Real]` resp.
 `NormedColumnVector[Complex]`.
@@ -147,3 +148,4 @@ of two *states*: in the first state with probability `1.0/4.0` and in the second
 For example, a value `normedColumnVector((r(1.0) + i(2.0)) / r(3.0), r(-2.0) / r(3.0))` will represent quantum
 information which will can be one of two *states*: in the first state with probability `5.0/9.0` and in the second state
 with probability `4.0/9.0`.
+-->
