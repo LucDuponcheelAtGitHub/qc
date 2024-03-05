@@ -47,6 +47,9 @@ A type class implementation *defines* the declared members of its type class spe
 
 `isValidScalar` is `true` if and only if a real number is *positive* or *zero*.
 
+Not using the absolute value function for the *scalar norm* of a real number is justified by the fact that a real number
+is required to be positive or zero.
+
 `scalarNorm` does not use the absolute value function because the real number is positive or zero.
 
 ### `complexScalar`
@@ -66,11 +69,13 @@ A value class *declares*, and *default defines* common *members* for *values* th
 
 When constructing such an instance, all declared members need to be defined.
 
-Member `seq` the *sequence of scalars* of a *normed vector*.
+`seq` is the *sequence of scalars* of a *normed vector*.
 
 `norm` is the *Manhattan, L1-norm* for vectors of *non-negative* real numbers resp. the *square* of the
-*Euclidean, L2-norm* for vectors of complex numbers. Not using the square root function is justified by the fact that
-the *norm* of a normed vector is required to be equal to `1.0`.
+*Euclidean, L2-norm* for vectors of complex numbers. 
+
+Not using the square root function for the *norm* of vectors of complex numbers is justified by the fact that this norm
+is required to be equal to `1.0`.
 
 ### `NormedColumnVector` and `NormedRowVector`
 
