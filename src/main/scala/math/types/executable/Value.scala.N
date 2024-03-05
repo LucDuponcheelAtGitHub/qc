@@ -1,0 +1,3 @@
+package math.types.executable
+
+type Value = [Z] =>> Z

@@ -1,0 +1,55 @@
+package qc.test.scalar.computation.state.system
+
+import math.types.scalar.{Complex}
+
+import qc.types.system.{Bit}
+
+import math.examples.columnVectors.{quantumBitStateSpace}
+
+import quantumBitStateSpace.{
+  Σ,
+  columnVector,
+  kets,
+  braKet,
+  linearBraKetCombination,
+  observeState,
+  observeStateTwice
+}
+
+class QuantumBitStateSpaceSuite extends munit.FunSuite:
+
+  import math.examples.columnVectors.{
+    complexColumnVector => quantumBitStateColumnVector
+  }
+
+  test("quantumBitStateSpace.kets forall { ket => ket.norm == 1.0 }"):
+    assert(
+      kets forall { ket => ket.norm == 1.0 },
+      true
+    )
+
+  extension (lx: Bit) def δ(rx: Bit): Complex = quantumBitStateSpace.δ(lx)(rx)
+  test("Σ forall { lx => Σ forall { rx => (lx braKet rx) == (lx δ rx) } }"):
+    assert(
+      Σ forall { lx => Σ forall { rx => (lx braKet rx) == (lx δ rx) } },
+      true
+    )
+
+  test(
+    "quantumBitStateColumnVector.seq == linearBraKetCombination(quantumBitStateColumnVector).seq"
+  ):
+    assert(
+      quantumBitStateColumnVector.seq ==
+        linearBraKetCombination(quantumBitStateColumnVector).seq,
+      true
+    )
+
+  test(
+    "observeState(quantumBitStateColumnVector) == observeStateTwice(quantumBitStateColumnVector)"
+  ):
+    assert(
+      observeState(quantumBitStateColumnVector) ==
+        observeStateTwice(quantumBitStateColumnVector),
+      true
+    )
+  

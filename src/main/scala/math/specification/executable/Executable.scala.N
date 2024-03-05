@@ -1,0 +1,12 @@
+package math.specification.executable
+
+trait Executable[C[_]]:
+
+  def value[Z]: Z => C[Z]
+
+  // TODO: change to >= and 2 to tau
+  extension [Z, Y](cz: C[Z]) def bind(z2cy: Z => C[Y]): C[Y]
+
+  type Environment
+
+  extension [Z](cz: C[Z]) def execute(e: Environment): Z

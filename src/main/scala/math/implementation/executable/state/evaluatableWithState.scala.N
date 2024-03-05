@@ -1,0 +1,48 @@
+package math.implementation.executable.state
+
+import math.types.{U, Read, Write}
+
+import math.types.executable.{Value}
+
+import math.types.executable.state.{With, EvaluatableWithState}
+
+import math.implementation.executable.{evaluatable}
+
+import evaluatable.{
+  // execute => evaluatableExecuteWith,
+  value => evaluatableValue,
+  bind => evaluatableBind
+}
+
+given evaluatableWithState[State]: EvaluatableWithState[State] with
+
+  extension [Z](sTvzAs: (Value With State)[Z])
+    def execute(e: Environment): Z =
+      val (vz, _) = sTvzAs(e)
+      // vz evaluatableExecuteWith ()
+      vz execute ()
+
+  def value[Z]: Z => (Value With State)[Z] =
+    z => s => evaluatableValue(z, s)
+
+  extension [Z, Y](sTvzAs: (Value With State)[Z])
+    def bind(z_T_sTvyAs: Z => (Value With State)[Y]): (Value With State)[Y] =
+      bs =>
+        sTvzAs(bs) evaluatableBind { (vz, ms) =>
+          z_T_sTvyAs(vz)(ms) evaluatableBind { (vy, es) =>
+            evaluatableValue(vy, es)
+          }
+        }
+
+  val read: Read[State][(State, State)] = s => (s, s)
+
+  val write: State => Write[State][U] = w => ((), w)
+
+  val readState: U => (Value With State)[State] =
+    // u => s => evaluatableValue(read(s))
+    _ => read andThen evaluatableValue
+
+  val writeState: State => (Value With State)[U] =
+    // s => u => evaluatableValue(write(s))
+    // s => u => (write andThen evaluatableValue)(s)
+    s => write andThen evaluatableValue // (_)

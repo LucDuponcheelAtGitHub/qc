@@ -1,0 +1,4 @@
+package math.types
+
+type Write = [W] =>> [Z] =>> (Z, W)
+

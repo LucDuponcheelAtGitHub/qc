@@ -1,0 +1,22 @@
+package math.test.scalar
+
+import math.examples.scalar.{complexNormedColumnVectorSpace}
+
+class ComplexNormedColumnVectorSpaceSuite extends munit.FunSuite:
+
+  import math.examples.scalar.{normedComplexColumnVector}
+
+  test("normedComplexColumnVector.norm == 1.0, true"):
+    assert(normedComplexColumnVector.norm == 1.0, true)
+
+  import complexNormedColumnVectorSpace.{asLinearBasisVectorCombination}
+
+  test(
+    "normedComplexColumnVector == asLinearBasisVectorCombination(normedComplexColumnVector), true"
+  ):
+    assert(
+      normedComplexColumnVector == asLinearBasisVectorCombination(
+        normedComplexColumnVector
+      ),
+      true
+    )

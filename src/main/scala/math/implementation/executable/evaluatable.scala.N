@@ -1,0 +1,24 @@
+package math.implementation.executable
+
+import math.types.{U}
+
+import math.types.executable.{Value, Evaluatable}
+
+given evaluatable: Evaluatable with
+
+  def value[Z]: Z => Value[Z] = z =>
+    val vz: Value[Z] = z
+    vz
+
+  extension [Z, Y](z: Z) def bind(zTvy: Z => Value[Y]): Y = zTvy(z)
+
+  type Environment = U
+
+  extension [Z](vz: Value[Z])
+    def execute(u: U): Z =
+
+      val evaluate: Z =
+        val z: Z = vz
+        z
+
+      evaluate

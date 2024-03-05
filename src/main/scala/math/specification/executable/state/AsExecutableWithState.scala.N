@@ -1,0 +1,8 @@
+package math.specification.executable.state
+
+import math.specification.executable.{Executable}
+
+trait AsExecutableWithState[C[_], State]
+    extends Executable[C]
+    with Stateful[State, C]:
+  type Environment = State

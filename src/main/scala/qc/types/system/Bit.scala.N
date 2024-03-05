@@ -1,0 +1,10 @@
+package qc.types.system
+
+enum Bit:
+
+  case Zero extends Bit
+
+  case One extends Bit
+
+
+

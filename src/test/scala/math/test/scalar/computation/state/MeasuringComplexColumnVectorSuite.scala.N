@@ -1,0 +1,21 @@
+package math.test.scalar.computation.state
+
+import scala.util.{Random}
+
+import math.examples.scalar.computation.state.{
+  measuredNormedComplexColumnVector,
+  twiceMeasuredNormedComplexColumnVector
+}
+
+class MeasuringComplexColumnVectorSuite extends munit.FunSuite:
+
+  given Random = Random(123L)
+
+  test(
+    "measuredNormedComplexColumnVector == twiceMeasuredNormedComplexColumnVector"
+  ):
+    assert(
+      measuredNormedComplexColumnVector ==
+        twiceMeasuredNormedComplexColumnVector,
+      true
+    )

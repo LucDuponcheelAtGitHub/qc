@@ -1,0 +1,23 @@
+package math.test.scalar
+
+import math.examples.scalar.{realNormedColumnVectorSpace}
+
+@main def normedRealColumnVectorSpaceTest() =
+
+  import math.examples.scalar.{normedRealColumnVector}
+
+  println()
+
+  println("normedRealColumnVector")
+  println("----------------------")
+  println(normedRealColumnVector)
+
+  import realNormedColumnVectorSpace.{asLinearBasisVectorCombination}
+
+  println(
+    "asLinearBasisVectorCombination(normedRealColumnVector)"
+  )
+  println(
+    "------------------------------------------------------"
+  )
+  println(asLinearBasisVectorCombination(normedRealColumnVector))

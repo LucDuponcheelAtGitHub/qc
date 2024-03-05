@@ -1,0 +1,9 @@
+package math.specification.executable.state
+
+import math.types.{U}
+
+trait Stateful[State, C[_]]:
+
+  val readState: U => C[State]
+
+  val writeState: State => C[U]

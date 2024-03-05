@@ -1,0 +1,19 @@
+package qc.specification.system
+
+import math.specification.ordered.{Ordered}
+
+import qc.types.system.{ClassicalStates}
+
+trait System[X]: //  extends Ordered[X]:
+
+  //
+  // declared
+  //
+
+  lazy val Σ: ClassicalStates[X]
+
+  // //
+  // // defined
+  // //
+ 
+  // extension (lx: X) def <(rx: X): Boolean = Σ.indexOf(lx) < Σ.indexOf(rx)

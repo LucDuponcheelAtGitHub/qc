@@ -1,0 +1,7 @@
+package math.types.executable.state
+
+import math.types.{Read, Write}
+
+type With = [C[_], State] =>> [Z] =>> Read[State][C[Write[State][Z]]]
+
+

@@ -1,0 +1,3 @@
+// package qc.types.system
+
+// type ClassicalBitStates = ClassicalStates[Bit]
