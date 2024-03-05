@@ -130,7 +130,7 @@ Note: in
 
 ### `QuantumStateVector`
 
-[QuantumStateVector.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/qc/types/scalar/QuantumStateVector.scala.
+[QuantumStateVector.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/qc/types/scalar/QuantumStateVector.scala.)
 
 `QuantumStateVector` is a `type` alias for `NormedColumnVector[Complex]`.
 
