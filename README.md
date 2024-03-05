@@ -15,13 +15,13 @@ The main difference between probabilistic information and quantum information is
 
 ### `Real`
 
-[Real.scala](src/main/scala/math/types/scalar/Real.scala)
+[Real.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/math/types/scalar/Real.scalamain/scala/math/types/scalar/Real.scala)
 
  `Real` is a `type` alias for `Double`.
 
 ### `Complex`
 
-[Complex.scala](src/main/scala/math/types/scalar/Complex.scala)
+[Complex.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/math/types/scalar/Real.scalamain/scala/math/types/scalar/Complex.scala)
 
  `Complex` is a `case class`.
 
@@ -30,7 +30,7 @@ The main difference between probabilistic information and quantum information is
 
  ### `Scalar`
 
-[Scalar.scala](src/main/scala/math/specification/scalar/Scalar.scala)
+[Scalar.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/math/types/scalar/Real.scalamain/scala/math/specification/scalar/Scalar.scala)
 
 `Scalar` is a `trait` that *specifies* a *type class* for *type parameter* `S` as `Scalar[S]`.
 
@@ -38,7 +38,7 @@ A type class specification *declares*, and *default defines* common *members* of
 
 ### `realScalar`
 
-[realScalar.scala](src/main/scala/math/implementation/scalar/realScalar.scala)
+[realScalar.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/math/types/scalar/Real.scalamain/scala/math/implementation/scalar/realScalar.scala)
 
 `realScalar` is a `given` that *implements* type class `Scalar` by *substituting* *type argument* `Real` for type
 parameter `S` as `Scalar[Real]`.
@@ -51,13 +51,13 @@ A type class implementation *defines* the declared members of its type class spe
 
 ### `complexScalar`
 
-[complexScalar.scala](src/main/scala/math/implementation/scalar/complexScalar.scala)
+[complexScalar.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/math/types/scalar/Real.scalamain/scala/math/implementation/scalar/complexScalar.scala)
 
 `complexScalar` defines two extra members, `r` resp. `i` to construct *real* resp *imaginary* complex numbers.
 
 ### `NormedVector`
 
-[NormedVector.scala](src/main/scala/math/specification/scalar/NormedVector.scala)
+[NormedVector.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/math/types/scalar/Real.scalamain/scala/math/specification/scalar/NormedVector.scala)
 
 `NormedVector` is a `trait` that specifies a *generic value class* with *parameter* `S`, required to be a `Scalar`, as
 `NormedVector[S: Scalar]`.
@@ -74,17 +74,17 @@ the *norm* of a normed vector is required to be equal to `1.0`.
 
 ### `NormedColumnVector` and `NormedRowVector`
 
-[NormedColumnVector.scala](src/main/scala/math/specification/scalar/NormedColumnVector.scala)
+[NormedColumnVector.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/math/types/scalar/Real.scalamain/scala/math/specification/scalar/NormedColumnVector.scala)
 
 and
 
-[NormedRowVector.scala](src/main/scala/math/specification/scalar/NormedRowVector.scala)
+[NormedRowVector.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/math/types/scalar/Real.scalamain/scala/math/specification/scalar/NormedRowVector.scala)
 
 `NormedColumnVector` and `NormedRowVector` differ in the way they implement `toString`.
 
 ### `NormedColumnVectorSpace`
 
-[NormedColumnVectorSpace.scala](src/main/scala/math/specification/scalar/NormedColumnVectorSpace.scala)
+[NormedColumnVectorSpace.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/math/types/scalar/Real.scalamain/scala/math/specification/scalar/NormedColumnVectorSpace.scala)
 
 `NormedColumnVectorSpace` is a `trait` that specifies a generic value class with parameter `S`, required to be a
 `Scalar`, as `NormedColumnVectorSpace[S: Scalar]`.
@@ -120,7 +120,7 @@ with *coefficients* `basisRowVector(i) o ncv` for all *indices* `i` in `0 to dim
 
 ### `ProbabilisticStateVector`
 
-[ProbabilisticStateVector.scala](src/main/scala/qc/types/scalar/ProbabilisticStateVector.scala)
+[ProbabilisticStateVector.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/math/types/scalar/Real.scalamain/scala/qc/types/scalar/ProbabilisticStateVector.scala)
 
 `ProbabilisticStateVector` is a `type` alias for `NormedColumnVector[Real]`.
 
@@ -130,7 +130,7 @@ Note: in
 
 ### `QuantumStateVector`
 
-[QuantumStateVector.scala](src/main/scala/qc/types/scalar/QuantumStateVector.scala.
+[QuantumStateVector.scala](https://github.com/LucDuponcheelAtGitHub/qc/blob/main/src/main/scala/math/types/scalar/Real.scalamain/scala/qc/types/scalar/QuantumStateVector.scala.
 
 `QuantumStateVector` is a `type` alias for `NormedColumnVector[Complex]`.
 
